@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="otto.com.ottorrino.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connectar"
+        android:layout_gravity="center"
+        android:id="@+id/button_conectar"/>
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MOVER"
+            android:textColor="#39d52d"
+            android:layout_margin="16sp"
+            android:gravity="center"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/otto_move"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageButtonMover"
+            android:background="#00000000"
+            android:layout_below="@+id/message"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:layout_below="@+id/imageButtonMover">
+
+            <ImageButton
+                android:id="@+id/imageButtonStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="#39d52d"
+                app:srcCompat="@drawable/stop"
+                android:layout_columnWeight="1"
+                android:gravity="center"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonEsquerda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:background="#00000000"
+                android:rotation="-90"
+                android:tint="#39d52d"
+                app:srcCompat="@drawable/double_up"
+                android:layout_columnWeight="1"
+                android:gravity="center"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonDireita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="1"
+                android:background="#00000000"
+                android:rotation="90"
+                android:tint="#39d52d"
+                app:srcCompat="@drawable/double_up"
+                android:layout_columnWeight="1"
+                android:gravity="center"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonVoltar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:background="#00000000"
+                android:rotation="180"
+                android:tint="#39d52d"
+                app:srcCompat="@drawable/double_up"
+                android:layout_columnWeight="1"
+                android:gravity="center"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonFrente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:background="#00000000"
+                android:tint="#39d52d"
+                app:srcCompat="@drawable/double_up"
+                android:layout_columnWeight="1"
+                android:gravity="center"/>
+        </GridLayout>
+
+    </RelativeLayout>
+
+   <!-- <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />-->
+
+</LinearLayout>
